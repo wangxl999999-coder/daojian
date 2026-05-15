@@ -97,6 +97,41 @@ const gameOverPanelObj = cc.Class({
                 playerData.gameData.bestScore = playerData.fightInfo.currScore;
             }
         }
+
+        // 更新每日任务统计
+        this.updateDailyTaskStats();
+    },
+
+    updateDailyTaskStats() {
+        // 今日游戏次数
+        playerData.todayPlayCount = (playerData.todayPlayCount || 0) + 1;
+        
+        // 今日获得第一名次数
+        let rank = playerData.fightInfo.rank;
+        if (playerData.killLastAi) {
+            rank = 1;
+        }
+        if (rank === 1) {
+            playerData.todayWinCount = (playerData.todayWinCount || 0) + 1;
+        }
+
+        // 检查是否是新的一天，重置每日任务
+        const today = new Date().toDateString();
+        if (playerData.lastLoginDate !== today) {
+            this.resetDailyTasks();
+            playerData.lastLoginDate = today;
+        }
+    },
+
+    resetDailyTasks() {
+        playerData.todayPlayCount = 0;
+        playerData.todayWinCount = 0;
+        playerData.todayWatchAdCount = 0;
+        playerData.dailyLoginCompleted = false;
+        playerData.dailyLoginClaimed = false;
+        playerData.play3GameClaimed = false;
+        playerData.watchAdClaimed = false;
+        playerData.reachTop1Claimed = false;
     },
 
     // 界面在每次被显示的时候调用,可以传参数，非常方便的进行界面数据调试

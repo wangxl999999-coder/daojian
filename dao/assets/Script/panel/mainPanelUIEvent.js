@@ -8,6 +8,7 @@ const playerData = require('playerData');
 const gameLogic = require('gameLogic');
 const utils = require('utils');
 const resourceUtil = require('resourceUtil');
+const douyinSidebarManager = kf.require('platform.douyinSidebarManager');
 
 const mainPanelObj = cc.Class({
     // 每个界面要注意继承panel
@@ -33,6 +34,10 @@ const mainPanelObj = cc.Class({
 
         sfBegin: cc.SpriteFrame,
         sfBeginAgain: cc.SpriteFrame,
+
+        btnTask: cc.Node,
+        btnSidebar: cc.Node,
+        nodeTaskRedDot: cc.Node,
     },
 
     // use this for initialization
@@ -52,6 +57,9 @@ const mainPanelObj = cc.Class({
 
         // 固定函数名称，用于统一注册客户端事件
         this.registerEvent();
+
+        // 初始化抖音平台功能
+        this.initDouyinPlatform();
         
         if (playerData.firstLogin && !playerData.isNewBee) {
             playerData.dailyLoginCanGetCount = 0;
@@ -284,7 +292,26 @@ const mainPanelObj = cc.Class({
 
     // 固定函数名称，用于统一注册ui事件
     registerWidgetEvent() {
-    
+        if (this.btnTask) {
+            this.btnTask.on('click', this.onBtnTaskClick, this);
+        }
+        if (this.btnSidebar) {
+            this.btnSidebar.on('click', this.onBtnSidebarClick, this);
+        }
+    },
+
+    initDouyinPlatform() {
+        douyinSidebarManager.getInstance().init();
+    },
+
+    onBtnTaskClick() {
+        cc.gameSpace.audioManager.playSound(constants.AUDIO_SOUND.CLICK);
+        clientEvent.dispatchEvent('showPanel', 'taskPanel');
+    },
+
+    onBtnSidebarClick() {
+        cc.gameSpace.audioManager.playSound(constants.AUDIO_SOUND.CLICK);
+        douyinSidebarManager.getInstance().openSidebar();
     },
 
     // 固定函数名称，用于统一注册客户端事件
@@ -423,6 +450,27 @@ const mainPanelObj = cc.Class({
             clientEvent.dispatchEvent('showPanel', 'tipsPanel', '升星了');
             playerData.levelData = levelData;
         }
+
+        // 检查任务红点
+        this.checkTaskRedDot();
+    },
+
+    checkTaskRedDot() {
+        if (this.nodeTaskRedDot) {
+            const hasUnclaimedReward = this.checkHasUnclaimedTaskReward();
+            this.nodeTaskRedDot.active = hasUnclaimedReward;
+        }
+    },
+
+    checkHasUnclaimedTaskReward() {
+        const tasks = [
+            { completed: playerData.dailyLoginCompleted, claimed: playerData.dailyLoginClaimed },
+            { completed: (playerData.todayPlayCount || 0) >= 3, claimed: playerData.play3GameClaimed },
+            { completed: (playerData.todayWatchAdCount || 0) >= 1, claimed: playerData.watchAdClaimed },
+            { completed: (playerData.todayWinCount || 0) >= 1, claimed: playerData.reachTop1Claimed }
+        ];
+
+        return tasks.some(task => task.completed && !task.claimed);
     },
 
     createSword: function(superStartNum) { // 主界面刀剑转动逻辑 (todo 皮肤直接写死 建议游戏里做关联)

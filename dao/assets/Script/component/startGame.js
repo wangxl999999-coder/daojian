@@ -1,5 +1,6 @@
 const playerData = require('playerData');
 const constants = require('constants');
+const douyinPlatform = kf.require('platform.douyinPlatform');
 
 const startGameObj = cc.Class({
     extends: cc.Component,
@@ -21,6 +22,9 @@ const startGameObj = cc.Class({
     start() {
         this.isReady = false;
         this.clientEvent = kf.require('basic.clientEvent');
+
+        // 初始化抖音平台
+        douyinPlatform.getInstance().init();
 
         this.loadUnnecessaryPanel(["mainPanel"]);
 
