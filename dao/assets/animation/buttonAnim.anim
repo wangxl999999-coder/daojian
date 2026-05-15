@@ -1,0 +1,93 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "buttonAnim",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 1.55,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": "2",
+  "curveData": {
+    "props": {
+      "scale": [
+        {
+          "frame": 0,
+          "value": {
+            "__type__": "cc.Vec2",
+            "x": 1,
+            "y": 1
+          }
+        },
+        {
+          "frame": 0.05,
+          "value": {
+            "__type__": "cc.Vec2",
+            "x": 0.93,
+            "y": 0.93
+          },
+          "curve": [
+            0.253125,
+            0.5604166666666668,
+            0.5489583333333332,
+            0.85625
+          ]
+        },
+        {
+          "frame": 0.21666666666666667,
+          "value": {
+            "__type__": "cc.Vec2",
+            "x": 1.15,
+            "y": 1.15
+          }
+        },
+        {
+          "frame": 0.3333333333333333,
+          "value": {
+            "__type__": "cc.Vec2",
+            "x": 0.98,
+            "y": 0.98
+          }
+        },
+        {
+          "frame": 0.5166666666666667,
+          "value": {
+            "__type__": "cc.Vec2",
+            "x": 1.08,
+            "y": 1.08
+          }
+        },
+        {
+          "frame": 0.6166666666666667,
+          "value": {
+            "__type__": "cc.Vec2",
+            "x": 1,
+            "y": 1
+          }
+        }
+      ]
+    },
+    "paths": {
+      "lightbutton/New Node": {
+        "props": {
+          "position": [
+            {
+              "frame": 1.1,
+              "value": [
+                -51.3,
+                85.5
+              ]
+            },
+            {
+              "frame": 1.55,
+              "value": [
+                283.1,
+                -135.1
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "events": []
+}

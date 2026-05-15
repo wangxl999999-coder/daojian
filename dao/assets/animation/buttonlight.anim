@@ -1,0 +1,38 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "buttonlight",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 1.4166666666666667,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": "2",
+  "curveData": {
+    "props": {
+      "position": [
+        {
+          "frame": 0,
+          "value": [
+            -107.2,
+            94.8
+          ]
+        },
+        {
+          "frame": 0.6,
+          "value": [
+            212,
+            -156
+          ]
+        },
+        {
+          "frame": 1.4166666666666667,
+          "value": [
+            212,
+            -156
+          ]
+        }
+      ]
+    }
+  },
+  "events": []
+}

@@ -1,0 +1,69 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "iconShake",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 2.9166666666666665,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": "2",
+  "curveData": {
+    "paths": {
+      "image": {
+        "props": {
+          "angle": [
+            {
+              "frame": 0,
+              "value": 0
+            },
+            {
+              "frame": 2,
+              "value": 0
+            },
+            {
+              "frame": 2.05,
+              "value": 30
+            },
+            {
+              "frame": 2.066666666666667,
+              "value": 20
+            },
+            {
+              "frame": 2.1333333333333333,
+              "value": -30
+            },
+            {
+              "frame": 2.1666666666666665,
+              "value": -20
+            },
+            {
+              "frame": 2.2333333333333334,
+              "value": 30
+            },
+            {
+              "frame": 2.2666666666666666,
+              "value": 20
+            },
+            {
+              "frame": 2.3333333333333335,
+              "value": -30
+            },
+            {
+              "frame": 2.3666666666666667,
+              "value": -20
+            },
+            {
+              "frame": 2.4166666666666665,
+              "value": 0
+            },
+            {
+              "frame": 2.9166666666666665,
+              "value": 0
+            }
+          ]
+        }
+      }
+    }
+  },
+  "events": []
+}

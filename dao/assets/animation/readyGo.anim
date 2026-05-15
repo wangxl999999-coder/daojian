@@ -1,0 +1,134 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "readyGo",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 3.6666666666666665,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": "0",
+  "curveData": {
+    "paths": {
+      "bg/readyGo/leftTime": {
+        "comps": {
+          "cc.Label": {
+            "string": [
+              {
+                "frame": 0,
+                "value": ""
+              },
+              {
+                "frame": 0.5,
+                "value": "3"
+              },
+              {
+                "frame": 1.5166666666666666,
+                "value": "2"
+              },
+              {
+                "frame": 2.5166666666666666,
+                "value": "1"
+              },
+              {
+                "frame": 3.4833333333333334,
+                "value": "0"
+              },
+              {
+                "frame": 3.5,
+                "value": "Go"
+              }
+            ]
+          }
+        },
+        "props": {
+          "scale": [],
+          "active": [
+            {
+              "frame": 0.5,
+              "value": true
+            },
+            {
+              "frame": 1.2166666666666666,
+              "value": false
+            },
+            {
+              "frame": 1.4333333333333333,
+              "value": false
+            },
+            {
+              "frame": 1.5166666666666666,
+              "value": true
+            },
+            {
+              "frame": 2.2,
+              "value": false
+            },
+            {
+              "frame": 2.433333333333333,
+              "value": false
+            },
+            {
+              "frame": 2.533333333333333,
+              "value": true
+            },
+            {
+              "frame": 3.183333333333333,
+              "value": false
+            },
+            {
+              "frame": 3.4166666666666665,
+              "value": false
+            },
+            {
+              "frame": 3.5,
+              "value": true
+            }
+          ]
+        }
+      },
+      "bg": {
+        "props": {
+          "active": [
+            {
+              "frame": 0,
+              "value": true
+            },
+            {
+              "frame": 3.65,
+              "value": false
+            }
+          ],
+          "scale": [
+            {
+              "frame": 3.5,
+              "value": {
+                "__type__": "cc.Vec2",
+                "x": 1,
+                "y": 1
+              }
+            },
+            {
+              "frame": 3.65,
+              "value": {
+                "__type__": "cc.Vec2",
+                "x": 2,
+                "y": 2
+              }
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 3.5,
+              "value": 255
+            },
+            {
+              "frame": 3.6666666666666665,
+              "value": 0
+            }
+          ]
+        }
+      }
+    }
+  },
+  "events": []
+}

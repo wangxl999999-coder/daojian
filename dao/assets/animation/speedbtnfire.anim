@@ -1,0 +1,43 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "speedbtnfire",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.5166666666666667,
+  "sample": 60,
+  "speed": 1.5,
+  "wrapMode": "2",
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "15806736-fa98-4a96-b74d-0056ed256d77"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "ab9af9ff-509e-4175-b31c-4a7fdc95a809"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "9dcb65c1-1e0c-42b3-8ad9-600c4dc7d20c"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "15806736-fa98-4a96-b74d-0056ed256d77"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

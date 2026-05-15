@@ -1,0 +1,45 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "numLabel",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.7285714285714285,
+  "sample": 14,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "props": {
+      "y": [
+        {
+          "frame": 0,
+          "value": 0,
+          "curve": [
+            0.08,
+            0.49,
+            0.76,
+            0.66
+          ]
+        },
+        {
+          "frame": 0.7142857142857143,
+          "value": 70
+        }
+      ],
+      "opacity": [
+        {
+          "frame": 0,
+          "value": 255
+        },
+        {
+          "frame": 0.35714285714285715,
+          "value": 255
+        },
+        {
+          "frame": 0.7142857142857143,
+          "value": 0
+        }
+      ]
+    }
+  },
+  "events": []
+}

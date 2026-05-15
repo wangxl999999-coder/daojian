@@ -1,0 +1,7 @@
+id,round,dangerDetectDistance,aiSpeed,aiType,fanCnt,range,durTime
+number,number,number,number,number,number,number,number
+ID,round,dangerDetectDistance,speed,aiType,fanCnt,range,durTime
+1,1,200,345,3,2,900,15
+2,2,1500,360,1,0,0,0
+3,3,200,345,3,2,900,15
+4,4,1500,360,1,0,0,0
